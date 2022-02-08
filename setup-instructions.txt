@@ -1,0 +1,30 @@
+CONTENTS:
+The folder contains the following contents:
+- This setup-instructions file
+- A phase-estimation-demo.ipynb file
+- A phase-estimation-demo.pdf file
+- A phase-esimtaiton-circuit.ipynb file
+- A installs.ipynb file
+
+The phase-estimation-demo.pdf file contains a report and code covering the quantum phase estimation circuit. The phase-estimation-demo.ipynb file contains the jupyter notebook from which the .pdf was generated. It is recommended to read the .pdf file rather than the .ipynb file. The .ipynb file should not be executed. This is because the report covers outputs from the executed code. The code contains a randomisation function so if it is executed the outputs will change, and the report will not make sense in respect to the new outputs. 
+
+The phase-estimation-circuit.ipynb file contains code implementing the complete phase estimation circuit. Code cells in this file may be executed. It is recommended to execute from the dropdown menu: "Kernel" -> "Restart & Run All". This will execute all code cells, making sure that their outputs are all up to date. 
+
+installs.ipynb contains commands for installing packagess. When initiating the Jupyter Notebooks environment, execution of this file will be necessary to install the packages used by the code. If the code does not execute due to missing packages then it will most likely throw an arror saying which package is missing. If this occurs, edit the code cell in installs.ipynb and add a line "pip install package", replacing "package" with the missing package name.
+
+SETTING UP:
+A Jupyter Notebooks environment is necessary to run the code in this folder. Setup instructions are provided below, but you may wish to use a different method. If you set up your own environment and have the files in this folder open in your notebook, make sure to first launch the installs.ipynb file and from the menu select: "Kernel" -> "Restart & Run All" to install the necessary packages. 
+
+Setting up a Jupyter Notebooks environment instructions:
+1. Install Anaconda individual edition on your operating system. The recommened installation settings are appropriate.
+https://www.anaconda.com/products/individual
+2. Once installed you will need to input some commands. If using Windows you will need to open the Anaconda Shell. Press the start key and type "anaconda". If Anaconda is installed correctly then the "Anaconda Powershell Prompt" should show up as a search match. Open this. On Linux you can open a standard shell.
+3. In the shell type the following sequence of commands and follow the instructions: 
+conda create -n qcomp python=3 anaconda (this may take a while)
+conda activate qcomp
+pip install jupyter
+4. Next, navigate to the folder containing the .ipynb files (the folder this text file is in) in the Anaconda shell. This may be done by using the "cd" command. For example:
+cd "C:\users\username\Downloads\phase-estimation\"
+5. Once inside the directory, type the following command:
+jupyter notebook
+6. The jupyter notebook environment should have launched. Open the installs.ipynb file and from the menu select: "Kernel" -> "Restart & Run All". This will install the necessary packages (may take a while). After this is done, you may open the other .ipynb files and run the code.
